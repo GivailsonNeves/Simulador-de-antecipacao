@@ -1,0 +1,13 @@
+// colors
+$form-border-color: #ccc;
+
+// sizes
+$field-spacer: 20px;
+$field-max-width: 350px;
+$form-field-max-width: 650px;
+$form-field-padding: 40px;
+$form-field-border-size: 1px;
+
+// effects
+$form-field-border: $form-field-border-size $form-border-color solid;
+$form-field-radius: 8px;

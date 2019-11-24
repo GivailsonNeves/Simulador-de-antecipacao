@@ -1,4 +1,6 @@
+import Main from './main';
+
 window.addEventListener('load', () => {
-    alert('Hello!');
+    new Main();
 });
   

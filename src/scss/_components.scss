@@ -1,0 +1,24 @@
+@import './variables';
+
+input, div {
+    box-sizing: border-box;
+}
+
+.field-input {
+    margin-bottom: $field-spacer;
+    display: block;
+    width: 100%;
+    max-width: $field-max-width;
+    & > input {
+        display: block;
+        width: 100%;
+    }
+}
+
+.list-values {
+    list-style: none;
+    padding: 0;
+    & > li {
+        margin-bottom: $field-spacer;
+    }
+}

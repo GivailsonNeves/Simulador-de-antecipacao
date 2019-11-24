@@ -1,0 +1,18 @@
+@import './variables';
+@import './components';
+
+.form-simulator {
+    margin: 0 auto;
+    width: 100%;
+    max-width: $form-field-max-width;
+    padding: $form-field-padding;
+    border-radius: $form-field-radius;
+    border: $form-field-border;
+    & > div {
+        display: flex;
+        width: 100%;
+        & > div {
+            &:first-child { flex: 1; }
+        }
+    }
+}
