@@ -2,8 +2,17 @@
   "name": "simulador-de-antecipacao",
   "version": "1.0.0",
   "description": "Projeto de avaliação para vaga de desenvolvedor Front",
+  "scripts": {
+    "test": "jest",
+    "build": "webpack --mode=production && node-sass ./src/scss/main.scss ./dist/bundle.css && exit 0",
+    "watch": "webpack --watch & node-sass --watch ./src/scss/main.scss ./dist/bundle.css",
+    "serve": "npm run watch & live-server --host=localhost --port=3007 dist/"
+  },
   "author": "Givailson de Souza Neves",
   "license": "ISC",
+  "jest": {
+    "verbose": true
+  },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
