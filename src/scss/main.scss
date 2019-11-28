@@ -2,17 +2,19 @@
 @import './components';
 
 .form-simulator {
-    margin: 0 auto;
+    margin: $top-spacer auto 0;
     width: 100%;
-    max-width: $form-field-max-width;
-    padding: $form-field-padding;
-    border-radius: $form-field-radius;
-    border: $form-field-border;
+    max-width: $form-max-width;
+    border-radius: $default-radius;
+    border: $field-border;
+    padding: 0;
     & > div {
         display: flex;
         width: 100%;
         & > div {
-            &:first-child { flex: 1; }
+            &:first-child { 
+                flex: 1;
+            }
         }
     }
 }
