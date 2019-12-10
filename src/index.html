@@ -15,9 +15,10 @@
           <label for="valorVenda">Informe o valor da venda *</label>
           <input id="valorVenda" name="valorVenda" type="tel">
         </div>
+        
         <div class="field-input">
           <label for="qtdParcelas">Em quantas parcelas *</label>
-          <input type="number" name="qtdParcelas" id="qtdParcelas">
+          <input type="number" name="qtdParcelas" min="1" max="12" id="qtdParcelas">
           <small>Máximo de 12 de parcelas</small>
         </div>
         <div class="field-input">
@@ -28,10 +29,10 @@
       <div class="receiving">
         <h4>Você receberá:</h4>
         <ul class="list-values">
-          <li>Amanhã: <strong>R$ 0,00</strong></li>
-          <li>Em 15 dias: <strong>R$ 0,00</strong></li>
-          <li>Em 30 dias: <strong>R$ 0,00</strong></li>
-          <li>Em 90 dias: <strong>R$ 0,00</strong></li>
+          <li>Amanhã: <strong id="tomorrow">R$ 0,00</strong></li>
+          <li>Em 15 dias: <strong id="fifteen">R$ 0,00</strong></li>
+          <li>Em 30 dias: <strong id="thirty">R$ 0,00</strong></li>
+          <li>Em 90 dias: <strong id="ninety">R$ 0,00</strong></li>
         </ul>
       </div>
     </div>

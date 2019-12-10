@@ -1,5 +1,7 @@
 import InputFields from './ui/input-field';
 import InputMoney from './ui/input-money';
+import Prepayment from './models/prepayment';
+import MoneyFormat from './utils/money-format';
 
 export default class Main {
     
@@ -18,8 +20,21 @@ export default class Main {
     _checkForm() {
         const invalid = this._form.filter( f => !f.isValid() ).length > 0;
         if (!invalid) {
-            console.log('calcular valor');
+
+            const prepayment = new Prepayment(
+                this._form[0].getValue(),
+                this._form[1].getValue(),
+                this._form[2].getValue()
+            );
+
+            this._showResult(prepayment);
         }
-        console.log('invalid', invalid);
+    }
+
+    _showResult(prepayment) {
+        document.getElementById('tomorrow').innerHTML = MoneyFormat.format(prepayment.inOneDay());
+        document.getElementById('fifteen').innerHTML = MoneyFormat.format(prepayment.inFifteenDays());
+        document.getElementById('thirty').innerHTML = MoneyFormat.format(prepayment.inThirtyDays());
+        document.getElementById('ninety').innerHTML = MoneyFormat.format(prepayment.inNinetyDays());
     }
 }

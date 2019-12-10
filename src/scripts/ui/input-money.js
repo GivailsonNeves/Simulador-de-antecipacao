@@ -17,7 +17,7 @@ export default class InputMoney extends InputField {
         );
 
         this._element.addEventListener('input', 
-            () => this.setValue(this.getValue())
+            () => { this.setValue(this.getValue()); if (this._onChange) this._onChange(this.getValue()) }
         );
     }
 
