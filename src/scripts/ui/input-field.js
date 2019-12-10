@@ -1,14 +1,15 @@
 export default class InputField {
 
-    constructor(fieldID, onChange = null, hdlValidate = null) {
-        this._element = document.getElementById(fieldID);
+    constructor(element, onChange = null, hdlValidate = null) {
+        this._element = element;
         this._hdlValidate = hdlValidate;
         this._onChange = onChange;
         this._prepareEvents();
     }
 
     _prepareEvents() {
-        this._element.addEventListener('input', () => this._onChange && this._onChange(this.getValue()) );
+        if (this._onChange)
+            this._element.addEventListener('input', () => this._onChange(this.getValue()) );
     }
 
     getValue() {

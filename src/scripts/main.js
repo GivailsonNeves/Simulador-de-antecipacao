@@ -9,9 +9,9 @@ export default class Main {
 
     _prepareFields() {
         this._form = [ 
-            new InputMoney('valorVenda', () => this._checkForm() ),
-            new InputFields('qtdParcelas', () => this._checkForm() ),
-            new InputFields('pctMDR', () => this._checkForm() )
+            new InputMoney(document.getElementById('valorVenda'), () => this._checkForm() ),
+            new InputFields(document.getElementById('qtdParcelas'), () => this._checkForm() ),
+            new InputFields(document.getElementById('pctMDR'), () => this._checkForm() )
         ];
     }
 

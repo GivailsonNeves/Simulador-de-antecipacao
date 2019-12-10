@@ -1,11 +1,14 @@
 export default class MoneyFormat {
 
     constructor() {
-        throw error("esta classe não pode ser instânciada!");
+        throw new Error("esta classe não pode ser instânciada!");
     }
 
     static format(val) {
         if (parseInt(val) === 0 || !val) return "";
+
+        val = parseInt(val) + "";
+
         if (val.length > 2) {
             const afterCommaValue = val.substring(val.length - 2);
             var beforeCommaValue = val.substring(0, val.length - 2);
@@ -19,8 +22,23 @@ export default class MoneyFormat {
             
             val =  beforeCommaValue + ',' + afterCommaValue;
 
+            return "R$ " + val;
+        } else {
+            switch(val.length) {
+                case 1: return "R$ 0,0" + val;
+                case 2: return "R$ 0," + val;
+            }
         }
-        return "R$ " + val;
+    }
+
+    static clearMask(val) {
+        if(!val) return "";
+        return val.replace(/[.,R$\s]/g, '');
+    }
+
+    static formatToFloat(val) {
+        if(!val) return 0;
+        return parseInt(MoneyFormat.clearMask(val)) / 100;
     }
 
 }

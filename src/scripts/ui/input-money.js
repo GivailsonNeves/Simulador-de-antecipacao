@@ -26,8 +26,10 @@ export default class InputMoney extends InputField {
     }
 
     getValue() {
-        return this._element.value
-                    .replace("R$ ", "")
-                    .replace(/[.,]/g, "");
+        return MoneyFormat.clearMask(this._element.value);
+    }
+
+    getFloatValue() {
+        return MoneyFormat.formatToFloat(this._element.value);
     }
 }
