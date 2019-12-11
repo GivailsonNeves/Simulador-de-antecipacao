@@ -5,9 +5,10 @@ export default class MoneyFormat {
     }
 
     static format(val) {
+        if (isNaN(val) || parseInt(val) === 0 || !val) return "R$ 0,00";
+
         val = parseInt(val) + "";
 
-        if (parseInt(val) === 0 || !val) return "R$ 0,00";
         if (val.length > 2) {
             const afterCommaValue = val.substring(val.length - 2);
             var beforeCommaValue = val.substring(0, val.length - 2);

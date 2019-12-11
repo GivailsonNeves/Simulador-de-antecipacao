@@ -14,8 +14,11 @@ describe('MoneyFormat class', () => {
         }
     });
 
-    it('should not format number', () => {    
-        expect(MoneyFormat.format("")).toBe("");
+    it('should format to zero currency', () => {    
+        expect(MoneyFormat.format("")).toBe("R$ 0,00");
+        expect(MoneyFormat.format("0")).toBe("R$ 0,00");
+        expect(MoneyFormat.format(null)).toBe("R$ 0,00");
+        expect(MoneyFormat.format(0)).toBe("R$ 0,00");
     });
 
     it('should not have dot', () => {    

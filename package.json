@@ -6,7 +6,7 @@
     "test": "jest --config ./jest-config.js",
     "build": "webpack --mode=production && node-sass ./src/scss/main.scss ./dist/bundle.css && exit 0",
     "watch": "webpack --watch & node-sass --watch ./src/scss/main.scss ./dist/bundle.css",
-    "serve": "npm run watch & live-server --host=localhost --port=3007 dist/"
+    "serve": "live-server --host=localhost --port=3007 dist/"
   },
   "author": "Givailson de Souza Neves",
   "license": "ISC",
