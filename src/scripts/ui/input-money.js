@@ -10,7 +10,7 @@ export default class InputMoney extends InputField {
 
     _prepareEvents() {
         const ALLOW_VALUES = new RegExp("[0-9]");
-        const ALLOW_KEYS = ['Backspace', 'Delete'];
+        const ALLOW_KEYS = ['Backspace', 'Delete', 'Tab'];
 
         this._element.addEventListener('keydown',
             event => !(ALLOW_VALUES.test(event.key) || ALLOW_KEYS.indexOf(event.key) !== -1) && event.preventDefault() 

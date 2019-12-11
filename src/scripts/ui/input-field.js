@@ -17,7 +17,10 @@ export default class InputField {
     }
 
     isValid() {
-        return ( this._hdlValidate && this._hdlValidate(this.getValue()) ) || !!this.getValue();
+        if(this._hdlValidate)
+            return this._hdlValidate(this.getValue());
+        else 
+            return !!this.getValue();
     }
 
     setValue(val) {

@@ -27,6 +27,11 @@ input, div {
     small {
         font-size: $field-font-size-warning;
         color: $ato;
+        transition: all .3s ease-in-out;
+        &.invalid {
+            color: $cognac;
+            font-weight: bold;
+        }
     }
     & > input {
         display: block;
