@@ -1,10 +1,10 @@
-# simulador-de-antecipacao
+# Simulador de Antecipação
 
-Projeto de avaliação para vaga de desenvolvedor Front
+Projeto de avaliação para vaga de desenvolvedor Front End
 
 ## Dependências do projeto
 
-Em princípio é nececessário o **Node** para executar este projeto.
+Em princípio é necessário o **Node** para executar este projeto.
 
 ## Arquitetura do projeto
 
@@ -28,6 +28,19 @@ Em princípio é nececessário o **Node** para executar este projeto.
             main.scss
     index.html
 ```
+
+**Onde:**
++ *index.html* > Arquivo principal do Html
++ *main.scss* > Arquivo principal do SCSS
++ *_variables.scss* > Arquivo para a definição de cores do SCSS
++ *_component.scss* > Arquivo para a definição dos componentes padrão do SCSS
++ *main.js* > Classe principal do projeto, responsável por agrupar os componentes e definir a lógica de fluxo da aplicação.
++ *index.js* > Arquivo responsável por disparar a execução da aplicação.
++ *money-format.js* > Classe Util responsável pelas regras de formatação de moeda.
++ *input-money.js* > Classe para controle de campos que devem ser usados para informar valores monetários.
++ *input-field.js* > Classe para controle de inputs Html
++ *mock-input.js* > Classe Mock que simula o básico de um input Html, utilizada somente para testes.
++  *prepayment.js* > Classe responsável pela lógica do cáuculo da antecipação.
 
 ## Execução do projeto
 
