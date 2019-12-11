@@ -26,11 +26,15 @@ export default class Main {
 
     _checkMaxParcelas(total) {
         var isValid = total > 0 && total <= 12;
-        document.getElementById('maxParcelas').classList = isValid ? '' : 'invalid';
+        const maxParcelasAlert = document.getElementById('maxParcelas');
+
+        maxParcelasAlert.classList.remove('invalid');
+        if (isValid) maxParcelasAlert.classList.add('invalid');
+
         return isValid;
     }
 
-    _checkForm() {
+    _checkForm() {        
         const invalid = this._form.filter(f => f.isValid() === false ).length > 0;
         if (!invalid) {
 

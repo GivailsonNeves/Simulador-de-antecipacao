@@ -39,8 +39,8 @@ Em princípio é necessário o **Node** para executar este projeto.
 + *money-format.js* > Classe Util responsável pelas regras de formatação de moeda.
 + *input-money.js* > Classe para controle de campos que devem ser usados para informar valores monetários.
 + *input-field.js* > Classe para controle de inputs Html
-+ *mock-input.js* > Classe Mock que simula o básico de um input Html, utilizada somente para testes.
-+  *prepayment.js* > Classe responsável pela lógica do cáuculo da antecipação.
++ *mock-input.js* > Classe Mock que simula o básico de um input Html, Somente para testes.
++  *prepayment.js* > Classe responsável pela lógica do cálculo da antecipação.
 
 ## Execução do projeto
 
