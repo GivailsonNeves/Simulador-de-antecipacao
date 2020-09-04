@@ -22,7 +22,7 @@
     "html-webpack-tags-plugin": "^2.0.17",
     "jest": "^24.9.0",
     "live-server": "^1.2.1",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   },
